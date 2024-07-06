@@ -1,0 +1,102 @@
+.fbot {
+    position: fixed;
+    z-index: 1000;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background-color: #fefefe;
+}
+
+.fbot-min {
+    top: 5px;
+    right: 5px;
+    font-size: 1.5rem;
+    padding: 0.3rem;
+    color: #003d58;
+}
+
+.fbot-max {
+    top: 20px;
+    right: 20px;
+}
+
+.fbot-title {
+    display: flex;
+    flex-direction: row;
+    background-color: #003d58;
+    padding: 0.5rem;
+}
+
+.fbot-title-icon {
+    font-size: 1.2rem;
+    margin: auto 1rem auto 0;
+    color: #fefefe;
+}
+
+.fbot-title-label {
+    color: #fefefe;
+    flex-grow:1;
+}
+
+.fbot-title-button {
+    font-size: 1.2rem;
+    margin: auto 0 auto 1rem;
+    color: #fefefe;
+}
+
+.fbot-body{
+    display: flex;
+    flex-direction: column;
+    min-height: 30vh;
+    padding: 0;
+}
+
+.fbot-conversation {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+    width: fit-content;
+    overflow-y: auto;
+    height: 50vh;
+    overflow-x: clip;
+    padding: 0.5rem;
+}
+
+.fbot-bubble {
+    background-color: #ccc;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 20vw;
+}
+
+.fbot-bubble-usr {
+    margin-left: 3vw;
+    background-color: #c3e7ff;
+}
+
+.fbot-bubble-bot {
+    margin-right: 3vw;
+    background-color: #fde6e6;
+}
+
+.fbot-bubble-src {
+    margin-right: 1rem;
+}
+
+.fbot-bubble-text {
+
+}
+
+.fbot-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem;
+}
+
+.fbot-question {
+    flex-grow: 1;
+}
+
+
