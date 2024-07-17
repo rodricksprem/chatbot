@@ -76,6 +76,7 @@
     background-color: #c3e7ff;
 }
 
+
 .fbot-bubble-bot {
     margin-right: 3vw;
     background-color: #fde6e6;
@@ -86,17 +87,28 @@
 }
 
 .fbot-bubble-text {
+    font-size: 14px;
+}
 
+.fbot-disclaimer-text {
+    font-size: 12px;
+    font-style: italic;
 }
 
 .fbot-footer {
     display: flex;
     flex-direction: column;
     padding: 0.3rem;
+    
 }
 
 .fbot-question {
     flex-grow: 1;
 }
 
-
+.user-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    border-radius: 15px;
+}

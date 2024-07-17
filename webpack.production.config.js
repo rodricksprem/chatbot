@@ -30,7 +30,19 @@ module.exports = function(env) {
                         MiniCssExtractPlugin.loader,
                         "css-loader"
                       ]
-                }
+                },
+                {
+                    test: /\.png/,
+                    use: [
+                        {
+                          loader: 'file-loader',
+                          options: {
+                            name: '[name].[ext]',
+                          },
+                        },]
+                  },
+                  
+                
             ]
         },
         externals: {

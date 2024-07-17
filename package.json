@@ -9,6 +9,7 @@
     "clipboardy": "2.2.0",
     "colors": "1.4.0",
     "css-loader": "^6.6.2",
+    "file-loader": "^6.2.0",
     "glob": "7.1.6",
     "glob-promise": "3.4.0",
     "inquirer": "6.5.2",
@@ -37,7 +38,7 @@
   },
   "flow": {
     "filenames": {
-      "js": "chatbot.js",
+      "js": "ChatBot.js",
       "css": "chatbot.css"
     }
   },
@@ -50,6 +51,8 @@
     "openai": "^3.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-loader-spinner": "^6.1.6",
+    "react-spinners": "^0.14.1",
     "source-map-loader": "^4.0.1"
   }
 }

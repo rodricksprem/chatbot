@@ -29,7 +29,7 @@ export default class ChatBot extends React.Component<any,any> {
         this.close=this.close.bind(this);
         this.getAnswer=this.getAnswer.bind(this);
         this.conversation = [];
-        this.conversation.push(new ChatItem("ASSISTANT","Hi, how can i help you today?"));
+        this.conversation.push(new ChatItem("ASSISTANT","Hi, how can i help you today?",false));
         this.state={size: "min", answer: ""}
     }
 
@@ -49,7 +49,7 @@ export default class ChatBot extends React.Component<any,any> {
 
     async getAnswer(e: any){
         if(e.key==="Enter") {
-            this.conversation.push(new ChatItem("YOU", this.textInput.value));
+            this.conversation.push(new ChatItem("YOU", this.textInput.value,false));
             this.setState({answer: "Thinking about it ..."}, () => {this.conversationElement.scrollTop = this.conversationElement.scrollHeight});
             try {
               
@@ -74,7 +74,7 @@ export default class ChatBot extends React.Component<any,any> {
                 );
                 console.log(response)
                 this.textInput.value="";
-                 this.conversation.push(new ChatItem("ASSISTANT", response.data.choices[0].message.content))
+                 this.conversation.push(new ChatItem("ASSISTANT", response.data.choices[0].message.content,true))
                   this.setState({answer: ""},() => {this.conversationElement.scrollTop = this.conversationElement.scrollHeight});
               } catch (error) {
                 console.error('Error sending message:', error);

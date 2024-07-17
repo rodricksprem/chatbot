@@ -12,7 +12,7 @@ import { ChatBubble } from "./ChatBubble";
 import axios from 'axios';
 declare var manywho: any;
 
-export default class ChatBot extends React.Component<any,any> {
+export default class ChatBotDBX extends React.Component<any,any> {
     
     conversation: ChatItem[];
     conversationElement: any;
@@ -29,7 +29,7 @@ export default class ChatBot extends React.Component<any,any> {
         this.close=this.close.bind(this);
         this.getAnswer=this.getAnswer.bind(this);
         this.conversation = [];
-        this.conversation.push(new ChatItem("ASSISTANT","Hi, how can i help you today?"));
+        this.conversation.push(new ChatItem("ASSISTANT","Hi, how can i help you today?",false));
         this.state={size: "min", answer: ""}
     }
 
@@ -49,7 +49,7 @@ export default class ChatBot extends React.Component<any,any> {
 
     async getAnswer(e: any){
         if(e.key==="Enter") {
-            this.conversation.push(new ChatItem("YOU", this.textInput.value));
+            this.conversation.push(new ChatItem("YOU", this.textInput.value,false));
             this.setState({answer: "Thinking about it ..."}, () => {this.conversationElement.scrollTop = this.conversationElement.scrollHeight});
             try {
                 
@@ -71,7 +71,7 @@ export default class ChatBot extends React.Component<any,any> {
                 );
           
                 this.textInput.value="";
-                 this.conversation.push(new ChatItem("ASSISTANT", response.data.predictions.prediction))
+                 this.conversation.push(new ChatItem("ASSISTANT", response.data.predictions.prediction,true))
                   this.setState({answer: ""},() => {this.conversationElement.scrollTop = this.conversationElement.scrollHeight});
               } catch (error) {
                 console.error('Error sending message:', error);
@@ -227,4 +227,4 @@ function prepBot() {
 }
 */
 
-manywho.component.register("Chatbot", ChatBot);
+manywho.component.register("Chatbot", ChatBotDBX);
