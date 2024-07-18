@@ -172,8 +172,7 @@ export default class ChatBot extends React.Component<any,any> {
                         <div
                             className="fbot-title"
                         >
-                            <img src="bot.png" alt="Chat with Virtual Assistant" title="Chat with Virtual Assistant" style="margin: 0px; padding: 0px; height: 100%; width: 100%; border-radius: 40px;">
-                            <FontAwesomeIcon 
+                             <FontAwesomeIcon 
                                 className="fbot-title-button"
                                 icon={faCircleXmark} 
                                 title="Close"
