@@ -166,22 +166,13 @@ export default class ChatBot extends React.Component<any,any> {
                 }
 
                 return (
-                    <div
+                    <div 
                         className='fbot fbot-max'
                     >
                         <div
                             className="fbot-title"
                         >
-                            <FontAwesomeIcon 
-                                className="fbot-title-icon"
-                                icon={faComments} 
-                                onClick={this.close} 
-                            />
-                            <span
-                                className="fbot-title-label"
-                            >
-                                ClinicalOps Chat
-                            </span>
+                            <img src="bot.png" alt="Chat with Virtual Assistant" title="Chat with Virtual Assistant" style="margin: 0px; padding: 0px; height: 100%; width: 100%; border-radius: 40px;">
                             <FontAwesomeIcon 
                                 className="fbot-title-button"
                                 icon={faCircleXmark} 

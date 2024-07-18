@@ -14,12 +14,11 @@ export class ChatBubble extends React.Component<any,any> {
         // const botIcon ="./bot.png";
         // const humanIcon = "./humanface.png"
         let isQueryResponse: boolean = chat.isQueryResponse;
-        console.log({isQueryResponse});
-      
         let isAssistant:boolean = chat.source==="ASSISTANT";
         let isProcessing:boolean = chat.source==="ASSISTANT" && chat.text==="Processing...";
-        console.log(isAssistant);
-        console.log(isProcessing);
+        console.log("isAssistant ",isAssistant);
+        console.log("isProcessing ",isProcessing);
+        console.log("isqueryresponse ",isQueryResponse);
         if(isAssistant){
             className += " fbot-bubble-bot";
             
@@ -37,13 +36,15 @@ export class ChatBubble extends React.Component<any,any> {
                   imageAlt="Bot"
                   isProcessing={isProcessing}
                   content={chat.text}
+                  isQueryResponse= {isQueryResponse}
                   ></ChatAssistant>
         )} else{
             return(<ChatHuman 
                   
                   className={className}
-                  imageIcon={botIcon}
+                  imageIcon={humanIcon}
                   imageAlt="User"
+                 
                   content={chat.text}
                   ></ChatHuman>
             )

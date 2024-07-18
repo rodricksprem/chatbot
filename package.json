@@ -39,7 +39,7 @@
   "flow": {
     "filenames": {
       "js": "ChatBot.js",
-      "css": "chatbot.css"
+      "css": "Chatbot.css"
     }
   },
   "dependencies": {
