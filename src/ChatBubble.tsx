@@ -2,6 +2,7 @@ import React from "react";
 import { ChatItem } from "./ChatItem";
 import botIcon from "./bot.png";
 import humanIcon from "./humanface.png";
+import botwithbgIcon from "./botwithbg.png";
 import { Comment } from "react-loader-spinner";
 import { ChatAssistant } from "./ChatAssistant";
 import { ChatHuman } from "./ChatHuman";
@@ -32,7 +33,7 @@ export class ChatBubble extends React.Component<any,any> {
         <ChatAssistant 
                   
                   className={className}
-                  imageIcon={botIcon}
+                  imageIcon={botwithbgIcon}
                   imageAlt="Bot"
                   isProcessing={isProcessing}
                   content={chat.text}

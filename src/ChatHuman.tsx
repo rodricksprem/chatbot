@@ -1,7 +1,4 @@
 import React from "react";
-import { ChatItem } from "./ChatItem";
-import botIcon from "./bot.png";
-import humanIcon from "./humanface.png";
 import { Comment } from "react-loader-spinner";
 
 export class ChatHuman extends React.Component<any,any> {
