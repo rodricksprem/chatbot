@@ -51,7 +51,7 @@
 }
 
 .fbot-conversation {
-    display: flex;
+   -display: flex;
     flex-direction: column;
     flex-grow: 1;
     flex-shrink: 1;
@@ -60,7 +60,26 @@
     overflow-y: auto;
     height: 50vh;
     overflow-x: clip;
-    padding: 0.5rem;
+    -padding: 0.5rem;
+    
+
+    font-family: Muli, sans-serif;
+    line-height: inherit;
+    background: rgb(244, 244, 244);
+    color: rgb(78, 78, 78);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 10px 8px;
+     display: block;
+}
+.hXlAqq {
+    font-family: Muli, sans-serif;
+    line-height: inherit;
+    background: rgb(244, 244, 244);
+    color: rgb(78, 78, 78);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 10px 8px;
 }
 
 .fbot-bubble {
@@ -117,6 +136,7 @@
     height: 50px;
     min-height: 50px;
     width: 100%;
+    
     display: flex;
     flex-direction: row;
     -webkit-box-pack: justify;
@@ -245,4 +265,50 @@
     max-height: 46px;
     text-align: right;
     transition: opacity 0.05s ease-out 0s, background 0.05s ease-out 0s;
+}
+
+
+.eYhqoF {
+    height: 100%;
+    width: 100%;
+    display: inherit;
+    flex-direction: inherit;
+    min-width: inherit;
+    min-height: inherit;
+    position: relative;
+    overflow: auto;
+}
+.eErOUs {
+    flex: 1 1 0%;
+    overflow: hidden auto;
+    min-height: 4em;
+    height: auto;
+    width: auto;
+    backface-visibility: hidden;
+    transform: translateZ(0px);
+}
+
+.bLIkAg {
+    display: flex;
+    align-items: flex-end;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    position: relative;
+    margin: 6px 7% 0px 9%;
+
+}
+
+.hXlAqq {
+    font-family: Muli, sans-serif;
+    line-height: inherit;
+    background: rgb(244, 244, 244);
+    color: rgb(78, 78, 78);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 10px 8px;
+    
+}
+
+.cczORp {
+    display: block;
 }

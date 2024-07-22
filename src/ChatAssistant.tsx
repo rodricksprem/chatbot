@@ -18,7 +18,7 @@ export class ChatAssistant extends React.Component<any,any> {
                 className={className}
             >
               {!isProcessing &&  <span
-                    className="fbot-bubble-src"
+                    //className="fbot-bubble-src"
                 >
                   <img
                         src={imageIcon}

@@ -34,7 +34,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "ngrok": "ngrok http --host-header=rewrite 8080",
-    "ngrok2": "ngrok http -region=eu --host-header=rewrite 8081"
+    "ngrok2": "ngrok http -region=eu --host-header=rewrite 8081",
+     "tsc": "tsc"
   },
   "flow": {
     "filenames": {
