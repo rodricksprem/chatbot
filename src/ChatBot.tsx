@@ -33,7 +33,7 @@ export default class ChatBot extends React.Component<any, any> {
     this.conversation.push(
       new ChatItem("ASSISTANT", "Hi, how can i help you today?", false)
     );
-    this.state = { size: "min", answer: "" };
+    this.state = { size: "min", answer: "" ,disable:true};
   }
 
   componentDidMount() {}
@@ -46,9 +46,15 @@ export default class ChatBot extends React.Component<any, any> {
     this.setState({ size: "min" });
     this.go();
   }
+  async onChangeEvent(e:any){
+    if(e.target.value.length>=1){
+        this.setState({disable:false});
+    }
+  }
 
   async getAnswer(e: any) {
-    if (e.key === "Enter") {
+    this.setState({disable:true});
+    //if (e.key === "Enter") {
       const quest = this.textInput.value;
       this.textInput.value = "";
       this.textInput.disabled = true;
@@ -91,7 +97,7 @@ export default class ChatBot extends React.Component<any, any> {
       } catch (error) {
         console.error("Error sending message:", error);
       }
-    }
+ //   }
   }
 
   async go() {
@@ -186,7 +192,7 @@ export default class ChatBot extends React.Component<any, any> {
         }
 
         return (
-            <div className="fbot fbot-max">
+            <div className="fbotnew fbot-max">
             <div className="hIBePD">
               <div className="dyxozL">
                 <div className="dRaMVw">
@@ -218,6 +224,7 @@ export default class ChatBot extends React.Component<any, any> {
                 role="button"
                 aria-label="close chat button"
                 className="bIGVOb"
+                onClick={this.close} 
               >
                 <svg
                   height="15px"
@@ -253,13 +260,13 @@ export default class ChatBot extends React.Component<any, any> {
               <div className="hiYdui">
                 <div className="cOALSM">
                   <textarea
-                    rows={1}
+                    rows={3}
                     placeholder="Type a message and press Enter"
-                    tabIndex={1}
+                    tabIndex={1} 
                     className="kTlUVN"
                     style={{ height: "35px" } as React.CSSProperties}
 		     ref={(element: HTMLTextAreaElement)=>{this.textInput = element}}
-                                onKeyUp={this.getAnswer}
+                                onKeyUp={this.getAnswer} onChange={this.onChangeEvent}
                   ></textarea>
                 </div>
                 <button
@@ -267,7 +274,9 @@ export default class ChatBot extends React.Component<any, any> {
                   title="Send message"
                   aria-label="submit"
                   type="button"
-                  className="jxmml"
+                  className="jxmml" disabled={this.state.disable}
+                  onSubmit={this.getAnswer}
+
                 >
                   <svg
                     version="1.1"

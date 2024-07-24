@@ -33,13 +33,13 @@ export class ChatAssistant extends React.Component<any,any> {
              {isProcessing &&  
                     <Comment
   visible={true}
-  height="40"
-  width="40"
+  height="25"
+  width="25"
   ariaLabel="comment-loading"
   wrapperStyle={{}}
   wrapperClass="comment-wrapper"
   color="#fff"
-  backgroundColor="#F4442E">
+  backgroundColor="#3135A3">
   </Comment>  
     }
     {
