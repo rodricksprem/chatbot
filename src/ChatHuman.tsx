@@ -9,6 +9,9 @@ export class ChatHuman extends React.Component<any,any> {
         let imageAlt:string= this.props.imageAlt;
        let content:string=this.props.content;
        let time:Date=this.props.time;
+       
+       let hoursAndMinute:string= time.getHours() + ':' + time.getMinutes() 
+       let isQueryResponse:boolean = this.props.isQueryResponse;
         return(
             <div>
             <div
@@ -32,7 +35,7 @@ export class ChatHuman extends React.Component<any,any> {
                 </span>
                
              </div>
-             <div className="fbot-bubble-usr-time">{time}</div>
+             <div className="fbot-bubble-usr-time">{hoursAndMinute}</div>
              </div>
         )
     }

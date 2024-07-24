@@ -53,7 +53,7 @@ export default class ChatBot extends React.Component<any, any> {
       this.textInput.value = "";
       this.textInput.disabled = true;
 
-      this.conversation.push(new ChatItem("YOU", quest, false));
+      this.conversation.push(new ChatItem("YOU", quest, false,));
       this.setState({ answer: "Thinking about it ..." }, () => {
         this.conversationElement.scrollTop =
           this.conversationElement.scrollHeight;
