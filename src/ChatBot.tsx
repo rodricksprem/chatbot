@@ -10,7 +10,8 @@ import { ChatItem } from "./ChatItem";
 import { ChatBubble } from "./ChatBubble";
 import axios from "axios";
 
-import botwithbg from "./botwithbg.png";
+
+import botIcon from "./bot.png";
 declare var manywho: any;
 
 export default class ChatBot extends React.Component<any, any> {
@@ -185,7 +186,7 @@ export default class ChatBot extends React.Component<any, any> {
         }
 
         return (
-          <div className="fbot fbot-max">
+            <div className="fbot fbot-max">
             <div className="hIBePD">
               <div className="dyxozL">
                 <div className="dRaMVw">
@@ -193,7 +194,7 @@ export default class ChatBot extends React.Component<any, any> {
                     <div className="ePFAfP">
                       <div className="fqXYVo">
                         <img
-                          src={botwithbg}
+                          src={botIcon}
                           alt="Chat with Virtual Assistant"
                           title="Chat with Virtual Assistant"
                           style={
@@ -207,7 +208,7 @@ export default class ChatBot extends React.Component<any, any> {
                           }
                         ></img>
                       </div>
-                      <div className="cqsqAH">DCU's Virtual Assistant</div>
+                      <div className="cqsqAH">ClinicalOps Virtual Assistant</div>
                     </div>
                   </div>
                 </div>
@@ -239,16 +240,12 @@ export default class ChatBot extends React.Component<any, any> {
             <div className="eYhqoF">
               <div
                 className="fbot-conversation"
-                style={{ "padding-bottom": "inherit" } as React.CSSProperties}
-              >
-                <div
-                  className="bLIkAg" //    className="fbot-conversation"
                   ref={(element: any) => {
                     this.conversationElement = element;
                   }}
                 >
                   {chats}
-                </div>
+              
               </div>
             </div>
 
@@ -261,6 +258,8 @@ export default class ChatBot extends React.Component<any, any> {
                     tabIndex={1}
                     className="kTlUVN"
                     style={{ height: "35px" } as React.CSSProperties}
+		     ref={(element: HTMLTextAreaElement)=>{this.textInput = element}}
+                                onKeyUp={this.getAnswer}
                   ></textarea>
                 </div>
                 <button
@@ -322,3 +321,4 @@ function prepBot() {
 */
 
 manywho.component.register("Chatbot", ChatBot);
+

@@ -8,7 +8,9 @@ export class ChatHuman extends React.Component<any,any> {
         let imageIcon: string = this.props.imageIcon;
         let imageAlt:string= this.props.imageAlt;
        let content:string=this.props.content;
+       let time:Date=this.props.time;
         return(
+            <div>
             <div
                 className={className}
             >
@@ -25,10 +27,12 @@ export class ChatHuman extends React.Component<any,any> {
                     
                 </span>
                 <span
-                    className="fbot-bubble-text">
+                    className="fbot-bubble-usr-text">
                    {content}
                 </span>
                
+             </div>
+             <div className="fbot-bubble-usr-time">{time}</div>
              </div>
         )
     }

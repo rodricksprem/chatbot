@@ -2,7 +2,6 @@ import React from "react";
 import { ChatItem } from "./ChatItem";
 import botIcon from "./bot.png";
 import humanIcon from "./humanface.png";
-import botwithbgIcon from "./botwithbg.png";
 import { Comment } from "react-loader-spinner";
 import { ChatAssistant } from "./ChatAssistant";
 import { ChatHuman } from "./ChatHuman";
@@ -20,6 +19,7 @@ export class ChatBubble extends React.Component<any,any> {
         console.log("isAssistant ",isAssistant);
         console.log("isProcessing ",isProcessing);
         console.log("isqueryresponse ",isQueryResponse);
+        
         if(isAssistant){
             className += " fbot-bubble-bot";
             
@@ -33,12 +33,14 @@ export class ChatBubble extends React.Component<any,any> {
         <ChatAssistant 
                   
                   className={className}
-                  imageIcon={botwithbgIcon}
+                  imageIcon={botIcon}
                   imageAlt="Bot"
                   isProcessing={isProcessing}
                   content={chat.text}
                   isQueryResponse= {isQueryResponse}
+                  time={chat.time}
                   ></ChatAssistant>
+                  
         )} else{
             return(<ChatHuman 
                   
@@ -47,6 +49,7 @@ export class ChatBubble extends React.Component<any,any> {
                   imageAlt="User"
                  
                   content={chat.text}
+                  time={chat.time}
                   ></ChatHuman>
             )
         }

@@ -17,6 +17,9 @@
 .fbot-max {
     top: 20px;
     right: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 8px 1px;
+    font-family: Muli, sans-serif;
+    
 }
 
 .fbot-title {
@@ -43,34 +46,28 @@
     color: #fefefe;
 }
 
-.fbot-body{
-    display: flex;
-    flex-direction: column;
-    min-height: 30vh;
-    padding: 0;
-}
 
 .fbot-conversation {
-   -display: flex;
+   display: block;
+    /* unicode-bidi: isolate; */
     flex-direction: column;
     flex-grow: 1;
     flex-shrink: 1;
     position: relative;
-    width: fit-content;
+    /* width: fit-content; */
     overflow-y: auto;
-    height: 50vh;
+    height: 75vh;
     overflow-x: clip;
-    -padding: 0.5rem;
-    
-
-    font-family: Muli, sans-serif;
+     width: fit-content; 
+    /* font-family: Muli, sans-serif; */
     line-height: inherit;
-    background: rgb(244, 244, 244);
-    color: rgb(78, 78, 78);
-    font-size: 15px;
-    font-weight: 600;
+    background: rgb(255 254 254);
+    
+     color: rgb(78, 78, 78); 
+    /* font-size: 10px; */
+    /* font-weight: 600; */
     padding: 10px 10px 8px;
-     display: block;
+    
 }
 .hXlAqq {
     font-family: Muli, sans-serif;
@@ -92,23 +89,67 @@
 
 .fbot-bubble-usr {
     margin-left: 3vw;
-    background-color: #c3e7ff;
+    background-color: rgb(1,61,108);
 }
 
 
 .fbot-bubble-bot {
-    margin-right: 3vw;
-    background-color: #fde6e6;
+    margin-right: 2vw;
+    background-color: rgb(243 243 243);
 }
 
 .fbot-bubble-src {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 
-.fbot-bubble-text {
-    font-size: 14px;
+
+.fbot-bubble-bot-text {
+     font-family: Muli, sans-serif;
+     
+    color: rgb(78, 78, 78);
+    
+    font-size: 15px;
+    font-weight: 400;
 }
 
+
+.fbot-bubble-bot-time {
+        font-size: 10px;
+    font-weight: 600;
+    color: rgb(146, 153, 169);
+    font-family: Muli, sans-serif;
+    text-align: right;
+    /* display: inline-block; */
+    position: relative;
+    left: -30px;
+    /* right: 75px; */
+    bottom: auto;
+    letter-spacing: inherit;
+    margin-bottom: 0.5rem;
+}
+
+.fbot-bubble-usr-text {
+     font-family: Muli, sans-serif;
+     
+    color: rgb(255 255 255);
+    
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.fbot-bubble-usr-time {
+        font-size: 10px;
+    font-weight: 600;
+    color: rgb(146, 153, 169);
+    font-family: Muli, sans-serif;
+    text-align: right;
+    /* display: inline-block; */
+    position: relative;
+    /* right: 75px; */
+    bottom: auto;
+    letter-spacing: inherit;
+    margin-bottom: 0.5rem;
+}
 .fbot-disclaimer-text {
     font-size: 12px;
     font-style: italic;
@@ -312,3 +353,6 @@
 .cczORp {
     display: block;
 }
+
+    
+       
